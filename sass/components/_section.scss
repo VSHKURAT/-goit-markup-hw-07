@@ -1,14 +1,17 @@
-.flexbox {
-  display: flex;
-  align-items: center;
-}
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.section-title {
+.section--without-padding-top {
+  padding-top: 0;
+}
+
+.section--other-background {
+  background-color: var(--secondary-background-color);
+}
+
+.section__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;

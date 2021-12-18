@@ -2,15 +2,6 @@
   border-bottom: 1px solid #ececec;
 }
 
-/* logo */
-
-.logo-item {
-  margin-right: 93px;
-}
-
-.logo-first-part {
-  color: #2196f3;
-}
 
 /*site nav */
 
@@ -41,7 +32,7 @@
   }
 }
 
-.header-current {
+.site-nav__link--current {
   color: var(--hover-color);
   position: relative;
   &::after {
@@ -86,8 +77,8 @@
   }
 }
 
-.envelope,
-.smartphone {
+.auth-nav__icon-envelope,
+.auth-nav__icon-smartphone {
   margin-right: 10px;
   fill: currentColor;
 }
