@@ -1,13 +1,20 @@
 .clients {
   display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  margin: -15px;
 }
 
 .clients__item {
+  margin: 15px;
+
   width: 170px;
   height: 92px;
-  & + & {
-    margin-left: 30px;
-  }
+  // & + & {
+  //   margin-left: 30px;
+  // }
 }
 
 .clients__link {
