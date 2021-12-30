@@ -58,6 +58,7 @@ ul {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
   padding: 0%;
@@ -253,15 +254,7 @@ img {
 
 /* AUTH NAV */
 .auth-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -272,6 +265,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .auth-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -349,6 +345,12 @@ img {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .header__mobile-box {
+    width: 100%;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,9 +363,6 @@ img {
           justify-content: center;
   width: 40px;
   height: 40px;
-  position: absolute;
-  top: 12px;
-  right: 12px;
   background: transparent;
   border: transparent;
 }
@@ -431,7 +430,6 @@ img {
   font-size: 26px;
   line-height: 1.62;
   font-weight: 900;
-  width: 360px;
   color: #ffffff;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
@@ -463,9 +461,12 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .feature-list__item {
     margin-bottom: 30px;
+  }
+  .feature-list__item:last-child {
+    margin-bottom: 0px;
   }
 }
 
@@ -489,6 +490,17 @@ img {
   line-height: 1.14;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .feature-list__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .feature-list__text {
@@ -588,7 +600,15 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .team-list__item {
+    margin-bottom: 30px;
+  }
+  .team-list__item:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -680,16 +700,28 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: -15px;
 }
 
 .clients__item {
+  -ms-flex-preferred-size: calc(100% / 2 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
   margin: 15px;
-  width: 170px;
   height: 92px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc(100% / 6 - 30px);
+        flex-basis: calc(100% / 6 - 30px);
+  }
 }
 
 .clients__link {
@@ -721,38 +753,26 @@ img {
 }
 
 .footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   .footer-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer-container {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -768,9 +788,9 @@ img {
   color: white;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer-contacts {
-    margin-left: 76px;
+    margin-bottom: 60px;
   }
 }
 
@@ -823,31 +843,16 @@ img {
   }
 }
 
-.footer-address__item:last-child {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-address__item:last-child {
-    margin-bottom: 0px;
-  }
-}
-
 /* JOIN US */
-.join-us {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .join-us {
-    margin-right: 89px;
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .join-us {
     margin-left: 70px;
-    margin-bottom: 0px;
   }
 }
 
@@ -855,6 +860,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .join-us__item {
@@ -912,11 +920,18 @@ img {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .subscribe {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .subscribe {
     margin-left: 93px;
     text-align: start;
     width: 570px;
+    margin-top: 0px;
   }
 }
 
@@ -1065,14 +1080,6 @@ img {
   margin-left: 8px;
 }
 
-.gallery {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* margin-right: -30px;
-  margin-bottom: -30px; */
-}
-
 @media screen and (min-width: 768px) {
   .gallery {
     display: -webkit-box;
@@ -1085,10 +1092,11 @@ img {
 }
 
 .gallery__item {
-  max-width: 370px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 30px;
+}
+
+.gallery__item:last-child {
+  margin-bottom: 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1103,7 +1111,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .gallery__item {
-    width: calc(100% / 4- 30px);
+    width: calc(100% / 3 - 30px);
   }
 }
 

@@ -111,25 +111,30 @@
     <h2 class="section__title">Чем мы занимаемся</h2>
     <ul class="work-list">
         <li class="work-list__item" >
-            <img  
-            srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x" 
-            width="370"  
-            src="./images/img1.jpg"
-            alt="На столе записка алгоритма,клавиатура и планшет">
+            <picture>
+                <source
+                srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x" type="image/jpeg" />
+            <img src="./images/img1.jpg" alt="На столе записка алгоритма,клавиатура и планшет">
+            </picture>
+           
         <p class="work-list__label">Десктопные приложения</p>
         </li>
         <li class="work-list__item" >
-            <img srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x" 
-             width="370"
-            src="./images/img2.jpg" alt="Человек использует сматфон и ноутбук">
+        <picture>
+            <source 
+            srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x" type="image/jpeg"/>
+            <img src="./images/img2.jpg" alt="Человек использует сматфон и ноутбук">
+        </picture>
+            
         <p class="work-list__label">Мобильные приложения</p>
         </li>
         <li class="work-list__item" >
-            <img 
-            srcset="./images/img3.jpg 1x, ./images/img3-2x.jpg 2x" 
-            width="370"
-            src="./images/img3.jpg" 
-            alt="Человек использует планшет на котором размещенна палитра цветов">
+            <picture>
+                <source srcset="./images/img3.jpg 1x, ./images/img3-2x.jpg 2x"  type="image/jpeg" />
+            <img src="./images/img3.jpg"
+                alt="Человек использует планшет на котором размещенна палитра цветов">
+            </picture>
+            
         <p class="work-list__label">Дизайнерские решения</p>
         </li>
     </ul>
@@ -339,7 +344,7 @@
          </address>
     </div>
     <div class="join-us">
-        <p class="join-us__title">Присоединяйтесь</p>
+        <p class="join-us__title">Присоединяйтесь </p>
         <ul class="join-us__list">
             <li class="join-us__item"><a class="join-us__link" href="">
                 <svg class="join-us__icon" width="20" height="20px">
